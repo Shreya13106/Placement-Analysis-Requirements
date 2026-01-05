@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Previous Year Group Discussion Questions & Answers</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+  /* Root & Reset */
+  *, *::before, *::after { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(circle at top, #050505 0%, #0a0a0f 100%);
+    background-size: 600% 600%;
+    animation: gradientShift 15s ease infinite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    color: #eee;
+  }
+
+  @keyframes gradientShift {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+  }
+
+  /* Navbar */
+  nav {
+    width: 100%;
+    background: rgba(20,20,30,0.7);
+    backdrop-filter: blur(12px);
+    padding: 1rem 2rem;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background 0.3s;
+  }
+  nav:hover {
+    background: rgba(20,20,30,0.85);
+  }
+  nav .logo { font-size: 1.5rem; font-weight: bold; color: #00d4ff; }
+  nav ul { list-style: none; display: flex; gap: 1.5rem; margin: 0; padding: 0; }
+  nav ul li a { text-decoration: none; color: #ccc; transition: 0.3s; }
+  nav ul li a:hover, nav ul li a.active { color: #00d4ff; font-weight: 600; }
+
+  h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #00d4ff;
+    text-align: center;
+    user-select: none;
+    text-shadow: 0 0 10px rgba(0,212,255,0.6);
+  }
+
+  .container {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  /* Glassmorphic Card with blue glow */
+  .card {
+    background: rgba(20, 25, 40, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.7);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px 25px;
+    color: #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.4s ease;
+    cursor: default;
+  }
+
+  .card:hover {
+    transform: scale(1.03);
+    box-shadow:
+      0 8px 20px rgba(0, 212, 255, 0.3),
+      0 0 25px rgba(0,212,255,0.4),
+      0 0 35px rgba(0,212,255,0.2);
+  }
+
+  .question {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #00d4ff;
+    position: relative;
+    cursor: default;
+    transition: color 0.3s;
+  }
+
+  .question::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background: #00d4ff;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .card:hover .question {
+    color: #00e0ff;
+  }
+
+  .card:hover .question::after {
+    width: 100%;
+    background: #00e0ff;
+  }
+
+  .answer {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    opacity: 0.9;
+    color: #bbb;
+    transition: color 0.3s;
+  }
+
+  .card:hover .answer {
+    color: #eee;
+  }
+
+  /* Scrollbar for dark blue mode */
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  body::-webkit-scrollbar-track {
+    background: #101020;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: #0d3c61;
+    border-radius: 5px;
+  }
+
+  @media (max-width: 480px) {
+    h2 { font-size: 2.2rem; margin-bottom: 30px; }
+    .card { padding: 20px 20px; }
+    .question { font-size: 1.25rem; }
+    .answer { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="logo">Placement Portal</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="branch.html">Branches</a></li>
+    <li><a href="company.html">Companies</a></li>
+    <li><a href="internship.html">Internships</a></li>
+    <li><a href="alumni.html">Alumni</a></li>
+    <li><a href="dashboard.html">Dashboard</a></li>
+  </ul>
+</nav>
+
+<h2>Previous Year Group Discussion Questions & Answers</h2>
+
+<div class="container">
+
+  <div class="card" tabindex="0">
+    <div class="question">What is the impact of social media on society?</div>
+    <div class="answer">
+      Social media has revolutionized communication, enabling instant connection worldwide. It fosters awareness and community but also leads to misinformation, reduced face-to-face interaction, and privacy concerns.
+    </div>
+  </div>
+
+  <div class="card" tabindex="0">
+    <div class="question">Discuss the advantages and disadvantages of remote work.</div>
+    <div class="answer">
+      Remote work offers flexibility, reduces commute time, and can increase productivity. However, it may cause isolation, blur work-life boundaries, and lead to communication challenges among teams.
+    </div>
+  </div>
+
+  <div class="card" tabindex="0">
+    <div class="question">How responsible are individuals in combating climate change?</div>
+    <div class="answer">
+      While governments and corporations have large-scale influence, individual actions like reducing waste, conserving energy, and supporting sustainable policies are crucial to collective climate efforts.
+    </div>
+  </div>
+
+  <div class="card" tabindex="0">
+    <div class="question">Will artificial intelligence create jobs or lead to unemployment?</div>
+    <div class="answer">
+      AI will automate routine tasks, potentially displacing some jobs, but it will also create new roles requiring advanced skills. The net effect depends on education and adaptation to technological changes.
+    </div>
+  </div>
+
+  <div class="card" tabindex="0">
+    <div class="question">Should the education system be reformed to meet future challenges?</div>
+    <div class="answer">
+      Yes, education should emphasize critical thinking, creativity, and digital skills to prepare students for evolving industries and global challenges rather than focusing solely on rote learning.
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

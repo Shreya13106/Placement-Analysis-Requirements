@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aptitude Questions & Answers</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background:radial-gradient(circle at top, #050505 0%, #0a0a0f 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 20px 60px;
+  }
+
+  /* Navbar (same as main page) */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index: 1000;
+  }
+
+  header h1 {
+    font-size: 28px;
+    color: #00aaff;
+    letter-spacing: 2px;
+  }
+
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+
+  nav ul li {
+    margin: 0 15px;
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: 0.3s;
+    padding: 8px 14px;
+    border-radius: 8px;
+  }
+
+  nav ul li a:hover {
+    background: rgba(0, 170, 255, 0.15);
+    color: #00aaff;
+    box-shadow: 0 0 8px #00aaff;
+  }
+
+  .profile-btn {
+    background-color: #00aaff;
+    color: #fff !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  .profile-btn:hover {
+    background-color: #0077cc;
+    transform: scale(1.05);
+  }
+
+  /* Title */
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    color: #00aaff;
+    text-shadow: 0 0 10px #0077cc;
+  }
+
+  /* Container */
+  .container {
+    max-width: 900px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  /* Cards */
+  .card {
+    background: linear-gradient(145deg, rgba(10, 15, 25, 0.9), rgba(5, 10, 20, 0.8));
+    border-radius: 14px;
+    padding: 20px 25px 20px 80px;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border: 1px solid transparent;
+    transition: all 0.35s ease;
+    cursor: pointer;
+  }
+
+  .card:hover, .card.active {
+    border-color: #00aaff;
+    box-shadow: 0 0 15px rgba(0, 170, 255, 0.3), inset 0 0 10px rgba(0, 170, 255, 0.15);
+    transform: translateY(-4px);
+  }
+
+  .number {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background: #00aaff;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #000814;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 8px #00aaff;
+    user-select: none;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+  }
+
+  .question {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #ffffff;
+  }
+
+  .toggle-icon {
+    font-size: 1.6rem;
+    color: #00aaff;
+    transition: transform 0.3s ease;
+  }
+
+  .card.active .toggle-icon {
+    transform: rotate(45deg);
+  }
+
+  .answer {
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: #d0ecff;
+    line-height: 1.5;
+    transition: max-height 0.3s ease, margin-top 0.3s ease;
+  }
+
+  .card.active .answer {
+    max-height: 300px;
+    margin-top: 15px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    header {
+      padding: 15px 25px;
+    }
+
+    header h1 {
+      font-size: 22px;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 90px;
+    }
+
+    .card {
+      padding-left: 65px;
+    }
+
+    .number {
+      width: 36px;
+      height: 36px;
+      font-size: 1rem;
+    }
+
+    .question {
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <h1>Campus360</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="placement.html">Placements</a></li>
+        <li><a href="internship.html">Internship</a></li>
+        <li><a href="branch.html">Branches</a></li>
+        <li><a href="alumini.html">Alumni</a></li>
+        <li><a href="TPO.html">TPO</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="profile.html" class="profile-btn">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Title -->
+  <h2>Aptitude Questions & Answers</h2>
+
+  <!-- Q&A Cards -->
+  <div class="container">
+    <div class="card">
+      <div class="number">1</div>
+      <div class="header">
+        <div class="question">What is the sum of the first 50 natural numbers?</div>
+        <div class="toggle-icon">+</div>
+      </div>
+      <div class="answer">
+        The sum of the first n natural numbers is n(n + 1)/2. For 50, it is 50 × 51 / 2 = 1275.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="number">2</div>
+      <div class="header">
+        <div class="question">If a train travels 60 km in 45 minutes, what is its speed in km/h?</div>
+        <div class="toggle-icon">+</div>
+      </div>
+      <div class="answer">
+        Speed = Distance ÷ Time. 45 minutes = 0.75 hours. So speed = 60 ÷ 0.75 = 80 km/h.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="number">3</div>
+      <div class="header">
+        <div class="question">What is the next number in the series: 2, 6, 12, 20, 30, ?</div>
+        <div class="toggle-icon">+</div>
+      </div>
+      <div class="answer">
+        The pattern is n(n+1) for n=1,2,... so next is 6 × 7 = 42.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="number">4</div>
+      <div class="header">
+        <div class="question">A shop offers 15% discount on an item priced at $200. What is the sale price?</div>
+        <div class="toggle-icon">+</div>
+      </div>
+      <div class="answer">
+        Discount = 15% of 200 = $30. Sale price = 200 - 30 = $170.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="number">5</div>
+      <div class="header">
+        <div class="question">How many ways can 3 people be seated in a row of 5 chairs?</div>
+        <div class="toggle-icon">+</div>
+      </div>
+      <div class="answer">
+        Number of ways = 5P3 = 5 × 4 × 3 = 60.
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script>
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      card.querySelector('.header').addEventListener('click', () => {
+        const isActive = card.classList.contains('active');
+        cards.forEach(c => c.classList.remove('active'));
+        if (!isActive) card.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

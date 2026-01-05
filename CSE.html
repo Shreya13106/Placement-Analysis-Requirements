@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Companies - Placement Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #050505 0%, #0a0a0f 100%);
+      color: white;
+    }
+
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #00aaff;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 400;
+      transition: 0.3s;
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+
+    nav ul li a:hover {
+      background: rgba(0, 170, 255, 0.15);
+      color: #00aaff;
+      box-shadow: 0 0 8px #00aaff;
+    }
+     /* Profile Button */
+    .profile-btn {
+      background-color: #00aaff;
+      color: #fff !important;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .profile-btn:hover {
+      background-color: #0077cc;
+      transform: scale(1.05);
+    }
+
+    /* Mobile menu */
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(12px);
+        padding: 15px;
+        border-radius: 12px;
+      }
+      .nav-links.show {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+        color: #00e0ff;
+      }
+    }
+
+    /* Search */
+    .search-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .search-container input {
+      width: 60%;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+
+    /* Company Cards */
+    .company-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px 40px 40px 40px;
+    }
+
+    .company-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .company-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 224, 255, 0.4);
+    }
+
+    .company-card img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .company-card h3 {
+      margin: 10px 0;
+    }
+
+    .company-card button {
+      margin-top: 10px;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 10px;
+      background: #00e0ff;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .company-card button:hover {
+      background: #00b8cc;
+      color: white;
+    }
+
+    /* Details Section */
+    .company-details {
+      display: none;
+      max-width: 900px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .company-details h2 {
+      color: #00e0ff;
+      margin-bottom: 10px;
+    }
+
+    .rating {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: gold;
+    }
+
+    .details-section {
+      margin-bottom: 15px;
+    }
+
+    .details-section h4 {
+      color: #00e0ff;
+      margin-bottom: 5px;
+    }
+
+    .review {
+      border-left: 3px solid #00e0ff;
+      padding-left: 10px;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+
+    form button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #00e0ff;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background: #00b8cc;
+      color: white;
+    }
+
+    a {
+      color: #00e0ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Campus360</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="placement.html">Placements</a></li>
+        <li><a href="internship.html">Internships</a></li>
+        <li><a href="branch.html">Branches</a></li>
+        <li><a href="alumini.html">Alumni</a></li>
+        <li><a href="TPO.html">TPO</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="dashboard.html" class="profile-btn">Profile</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+
+<script>
+const subscribeBtn = document.getElementById('subscribeBtn');
+const statusMsg = document.getElementById('statusMsg');
+
+subscribeBtn.addEventListener('click', () => {
+    const companyName = "Company XYZ"; // Replace dynamically per page
+    fetch('/subscribe', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({company: companyName})
+    })
+    .then(res => res.json())
+    .then(data => {
+        if(data.success){
+            statusMsg.textContent = "Subscribed! ✅";
+            subscribeBtn.disabled = true;
+        } else {
+            statusMsg.textContent = "Error! Try again.";
+        }
+    })
+});
+</script>
+
+  <!-- Search -->
+  <div class="search-container">
+    <input type="text" id="searchBar" placeholder="Search companies...">
+  </div>
+
+  <!-- Company Cards -->
+  <div class="company-container" id="companyContainer">
+    <!-- Cards dynamically populated -->
+  </div>
+
+  <!-- Company Details -->
+  <div id="company-details" class="company-details"></div>
+
+  <script>
+    function toggleMenu() {
+      document.querySelector(".nav-links").classList.toggle("show");
+    }
+
+    const companyData = {
+      google: {name:"Google", industry:"Technology", location:"California, USA", rating:"4.6 / 5", workEnv:"Innovative, flexible, and employee-friendly environment.", salary:"Competitive, with bonuses and stock options.", interview:"Online test, Technical interview, HR.", pros:"Great perks, work culture, innovation.", cons:"High competition, work pressure.", reviews:["Amazing place to learn and grow!","Challenging but rewarding experience."], website:"https://careers.google.com"},
+      microsoft: {name:"Microsoft", industry:"Technology", location:"Washington, USA", rating:"4.5 / 5", workEnv:"Collaborative, diverse, supportive workplace.", salary:"Great salary package with health benefits.", interview:"Coding rounds, System design, HR.", pros:"Stable, great work-life balance.", cons:"Slow decision-making at times.", reviews:["Excellent benefits and culture.","Good career growth opportunities."], website:"https://careers.microsoft.com"},
+      amazon: {name:"Amazon", industry:"E-commerce, Cloud", location:"Seattle, USA", rating:"4.2 / 5", workEnv:"Fast-paced, innovative, high-pressure.", salary:"Good package, extra perks for managers.", interview:"Leadership principles focused, Technical + HR.", pros:"Challenging work, global exposure.", cons:"Long working hours.", reviews:["Lots of learning opportunities.","Workload can be intense."], website:"https://amazon.jobs"},
+      infosys: {name:"Infosys", industry:"IT Services & Consulting", location:"Bengaluru, India", rating:"4.0 / 5", workEnv:"Good training, corporate work culture.", salary:"Average salary, great for freshers.", interview:"Aptitude test, Technical round, HR interview.", pros:"Strong training programs, good brand.", cons:"Low salary hikes, slower promotions.", reviews:["Best company to start career.","Training is excellent."], website:"https://www.infosys.com/careers"},
+      tcs: {name:"TCS (Tata Consultancy Services)", industry:"IT Services & Consulting", location:"Mumbai, India", rating:"4.1 / 5", workEnv:"Stable and secure workplace.", salary:"Decent salary, average increments.", interview:"Online assessment, Technical round, HR.", pros:"Job security, brand reputation.", cons:"Slow career growth.", reviews:["Great place for stability.","Projects can be repetitive."], website:"https://www.tcs.com/careers"},
+      wipro: {name:"Wipro", industry:"IT Services & Consulting", location:"Bengaluru, India", rating:"3.9 / 5", workEnv:"Good work-life balance, flexible timings.", salary:"Average salary, competitive for freshers.", interview:"Aptitude, Technical, HR.", pros:"Work-life balance, brand value.", cons:"Compensation not very high.", reviews:["Good for beginners.","Calm work environment."], website:"https://careers.wipro.com"},
+      accenture: {name:"Accenture", industry:"IT Consulting & Services", location:"Dublin, Ireland (Global)", rating:"4.3 / 5", workEnv:"Fast-paced, collaborative, diverse teams.", salary:"Good salary with perks.", interview:"Coding, Technical, HR.", pros:"Great exposure to projects, supportive culture.", cons:"Can be stressful at times.", reviews:["Excellent client projects.","Good career growth."], website:"https://www.accenture.com/careers"},
+      ibm: {name:"IBM", industry:"Technology & Consulting", location:"New York, USA", rating:"4.2 / 5", workEnv:"Flexible, innovation-focused.", salary:"Decent salary with good benefits.", interview:"Aptitude, Coding, Technical, HR.", pros:"Work culture, brand name.", cons:"Some legacy projects.", reviews:["Great work environment.","Stable career growth."], website:"https://www.ibm.com/careers"},
+      oracle: {name:"Oracle", industry:"Database & Cloud Computing", location:"Austin, USA", rating:"4.1 / 5", workEnv:"Corporate, structured, innovation driven.", salary:"Good salary with stock options.", interview:"Coding rounds, Technical interview, HR.", pros:"Strong tech stack, stable job.", cons:"Sometimes bureaucratic.", reviews:["Lots of learning opportunities.","Good products to work on."], website:"https://www.oracle.com/careers"}
+    };
+
+    function loadCompanies() {
+      const container = document.getElementById("companyContainer");
+      container.innerHTML = Object.keys(companyData).map(company => `
+        <div class="company-card" data-name="${companyData[company].name.toLowerCase()}">
+          <img src="https://logo.clearbit.com/${company}.com" alt="${companyData[company].name} Logo">
+          <h3>${companyData[company].name}</h3>
+          <button onclick="showDetails('${company}')">View Details</button>
+        </div>
+      `).join('');
+    }
+
+    function showDetails(company) {
+      const data = companyData[company];
+      const detailsDiv = document.getElementById("company-details");
+      detailsDiv.innerHTML = `
+        <h2><img src="https://logo.clearbit.com/${company}.com" style="width:40px; vertical-align:middle; border-radius:50%;"> ${data.name}</h2>
+        <div class="rating"><i class="fa fa-star"></i> ${data.rating}</div>
+        <div class="details-section"><h4>Industry</h4><p>${data.industry}</p></div>
+        <div class="details-section"><h4>Location</h4><p>${data.location}</p></div>
+        <div class="details-section"><h4>Working Environment</h4><p>${data.workEnv}</p></div>
+        <div class="details-section"><h4>Salary & Benefits</h4><p>${data.salary}</p></div>
+        <div class="details-section"><h4>Interview Process</h4><p>${data.interview}</p></div>
+        <div class="details-section"><h4>Pros</h4><p>${data.pros}</p></div>
+        <div class="details-section"><h4>Cons</h4><p>${data.cons}</p></div>
+        <div class="details-section"><h4>User Reviews</h4>
+          ${data.reviews.map(r => `<div class="review">"${r}"</div>`).join('')}
+        </div>
+        <div class="details-section"><h4>Submit Your Review</h4>
+          <form>
+            <input type="text" placeholder="Your Name" required>
+            <textarea placeholder="Write your review..." rows="4" required></textarea>
+            <button type="submit">Submit Review</button>
+          </form>
+        </div>
+        <div class="details-section"><h4>Company Website</h4>
+          <a href="${data.website}" target="_blank">${data.website}</a>
+        </div>
+      `;
+      detailsDiv.style.display = "block";
+      detailsDiv.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    document.getElementById("searchBar").addEventListener("keyup", function() {
+      const filter = this.value.toLowerCase();
+      document.querySelectorAll(".company-card").forEach(card => {
+        const name = card.getAttribute("data-name");
+        card.style.display = name.includes(filter) ? "block" : "none";
+      });
+    });
+
+    loadCompanies();
+  </script>
+</body>
+</html>                         

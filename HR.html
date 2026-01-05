@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HR Interview Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: radial-gradient(circle at top, #050505 0%, #0a0a0f 100%);
+      color: #e6edf3;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Navbar */
+    nav {
+      width: 100%;
+      background: #0d1117;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      box-shadow: 0 4px 20px rgba(88, 166, 255, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #58a6ff;
+      letter-spacing: 1px;
+      text-shadow: 0 0 8px #58a6ffaa;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    nav ul li {
+      margin-left: 30px;
+    }
+    nav ul li a {
+      color: #e6edf3;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s ease;
+      font-size: 1rem;
+    }
+    nav ul li a:hover {
+      color: #58a6ff;
+      text-shadow: 0 0 8px #58a6ff;
+    }
+     /* Profile Button */
+    .profile-btn {
+      background-color: #00aaff;
+      color: #fff !important;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .profile-btn:hover {
+      background-color: #0077cc;
+      transform: scale(1.05);
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      margin: 60px 0 40px;
+      user-select: none;
+    }
+    header h1 {
+      font-size: 3rem;
+      color: #58a6ff;
+      text-shadow: 0 0 8px #58a6ff88;
+    }
+    header p {
+      font-weight: 300;
+      font-size: 1.2rem;
+      color: #8b949e;
+      margin-top: 8px;
+    }
+
+    /* Content Sections */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    section {
+      background: rgba(25, 30, 40, 0.45);
+      border-radius: 16px;
+      padding: 25px 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 30px rgba(88, 166, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(88, 166, 255, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    section:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 40px rgba(88, 166, 255, 0.5);
+      border-color: #58a6ff;
+    }
+    .content {
+      flex: 1 1 500px;
+      min-width: 280px;
+    }
+    section h2 {
+      font-weight: 700;
+      font-size: 1.9rem;
+      margin-bottom: 18px;
+      color: #58a6ff;
+      text-shadow: 0 0 6px #58a6ffaa;
+    }
+    .section-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 16px;
+      box-shadow: 0 0 15px #58a6ff99;
+      object-fit: cover;
+      flex-shrink: 0;
+      transition: box-shadow 0.3s ease;
+    }
+    section:hover .section-img {
+      box-shadow: 0 0 25px #58a6ffcc;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 14px;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      transition: color 0.3s ease;
+    }
+    ul li:hover {
+      color: #58a6ff;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #8b949e;
+      user-select: none;
+      padding-bottom: 30px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+      }
+      nav ul li {
+        margin: 10px 0;
+      }
+      section {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .section-img {
+        width: 100%;
+        height: 220px;
+        margin-bottom: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Campus360</div>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="internship.html" class="active">Internships</a></li>
+      <li><a href="branch.html">Branches</a></li>
+      <li><a href="placement.html">Placements</a></li>
+      <li><a href="alumini.html">Alumni</a></li>
+      <li><a href="TPO.html">TPO</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+       <li><a href="dashboard.html" class="profile-btn">Profile</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>HR Interview Guide</h1>
+    <p>Prepare for your HR interview with confidence</p>
+  </header>
+
+  <main class="container">
+
+    <section>
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80"
+        alt="HR Interview" class="section-img" loading="lazy" />
+      <div class="content">
+        <h2>What is an HR Interview?</h2>
+        <ul>
+          <li>Focuses on your personality, attitude, and cultural fit.</li>
+          <li>Evaluates communication skills and teamwork abilities.</li>
+          <li>Often covers your background, strengths, and weaknesses.</li>
+          <li>Assesses your motivation and career goals.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80"
+        alt="HR Questions" class="section-img" loading="lazy" />
+      <div class="content">
+        <h2>Common HR Interview Questions</h2>
+        <ul>
+          <li>Tell me about yourself.</li>
+          <li>Why do you want to work here?</li>
+          <li>Describe a challenging situation and how you handled it.</li>
+          <li>What are your strengths and weaknesses?</li>
+          <li>Where do you see yourself in 5 years?</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&q=80"
+        alt="Interview Tips" class="section-img" loading="lazy" />
+      <div class="content">
+        <h2>Tips to Succeed in HR Interviews</h2>
+        <ul>
+          <li>Be honest and confident.</li>
+          <li>Research the company culture before the interview.</li>
+          <li>Prepare examples of your teamwork and problem-solving skills.</li>
+          <li>Maintain good eye contact and body language.</li>
+          <li>Listen carefully and answer clearly.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Interview Prep. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

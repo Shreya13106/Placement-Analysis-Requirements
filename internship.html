@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internships</title>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box; font-family:"Poppins", sans-serif;}
+    body {background:radial-gradient(circle at top, #050505 0%, #0a0a0f 100%);; color:#fff; min-height:100vh; display:flex; flex-direction:column;}
+
+   
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #00aaff;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 400;
+      transition: 0.3s;
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+
+    nav ul li a:hover {
+      background: rgba(0, 170, 255, 0.15);
+      color: #00aaff;
+      box-shadow: 0 0 8px #00aaff;
+    }
+     /* Profile Button */
+    .profile-btn {
+      background-color: #00aaff;
+      color: #fff !important;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .profile-btn:hover {
+      background-color: #0077cc;
+      transform: scale(1.05);
+    }
+
+    /* Heading */
+    .heading {text-align:center; padding:2rem 1rem;}
+    .heading h1 {font-size:2rem; margin-bottom:0.5rem;}
+    .heading p {color:#aaa;}
+
+    /* Internship Cards */
+    .internship-container {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:1.5rem; width:90%; max-width:1200px; margin:0 auto; padding:2rem 0;
+    }
+    .internship-card {
+      background: rgba(255,255,255,0.05);
+      border-radius:20px; padding:1.5rem;
+      backdrop-filter: blur(15px); border:1px solid rgba(255,255,255,0.1);
+      transition: transform 0.3s, border 0.3s;
+      display:flex; flex-direction:column; align-items:center; text-align:center;
+    }
+    .internship-card:hover {transform:translateY(-8px); border:1px solid #00aaff;}
+    .internship-card img {width:80px; height:80px; object-fit:contain; margin-bottom:1rem; border-radius:50%; padding:10px; background:#111;}
+    .internship-card h3 {color:#00d4ff; margin-bottom:0.5rem;}
+    .internship-card p {color:#ccc; font-size:0.9rem; margin-bottom:0.3rem;}
+    .internship-card a {text-decoration:none; color:#fff; background:#00aaff; padding:0.5rem 1rem; border-radius:10px; transition:0.3s;}
+    .internship-card a:hover {background:#008fb3;}
+
+    @media(max-width:768px){
+      .internship-container {grid-template-columns:1fr;}
+    }
+
+    /* Sections */
+    .section {width:90%; max-width:1100px; margin:2rem auto; background: rgba(255,255,255,0.05); padding:2rem; border-radius:20px; backdrop-filter:blur(15px); border:1px solid rgba(255,255,255,0.1);}
+    .section h2 {color:#00d4ff; margin-bottom:1rem;}
+    .section p, .section li {color:#ccc; margin-bottom:0.5rem; line-height:1.5;}
+    .section ul {list-style:disc; padding-left:1.5rem;}
+    .tips li::before {content:"✓ "; color:#00aaff;}
+  </style>
+</head>
+<body>
+
+ <header>
+    <h1>Campus360</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="placement.html">Placements</a></li>
+        <li><a href="branch.html">Branches</a></li>
+        <li><a href="alumini.html">Alumni</a></li>
+        <li><a href="TPO.html">TPO</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="dashboard.html" class="profile-btn">Profile</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+
+
+  <!-- Heading -->
+  <div class="heading">
+    <h1>Internship Opportunities</h1>
+    <p>Explore internships to gain experience and boost your career prospects</p>
+  </div>
+
+  <!-- Internship Cards -->
+  <div class="internship-container">
+
+    <div class="internship-card">
+      <img src="{{ url_for('static', filename='img/google.png') }}" alt="Google Logo">
+      <h3>Google</h3>
+      <p><strong>Role:</strong> Software Engineering Intern</p>
+      <p><strong>Duration:</strong> 3 months</p>
+      <p><strong>Stipend:</strong> Paid</p>
+      <p><strong>Type:</strong> Technical</p>
+      <a href="https://careers.google.com/students/" target="_blank">Apply Now</a>
+    </div>
+
+    <div class="internship-card">
+      <img src="{{ url_for('static', filename='img/microsoft.png') }}" alt="Microsoft Logo">
+      <h3>Microsoft</h3>
+      <p><strong>Role:</strong> Software Development Intern</p>
+      <p><strong>Duration:</strong> 3 months</p>
+      <p><strong>Stipend:</strong> Paid</p>
+      <p><strong>Type:</strong> Technical</p>
+      <a href="https://careers.microsoft.com/students" target="_blank">Apply Now</a>
+    </div>
+
+    <div class="internship-card">
+      <img src="{{ url_for('static', filename='img/amazon.jpeg') }}" alt="Amazon Logo">
+      <h3>Amazon</h3>
+      <p><strong>Role:</strong> Software / Business Analyst Intern</p>
+      <p><strong>Duration:</strong> 2-3 months</p>
+      <p><strong>Stipend:</strong> Paid</p>
+      <p><strong>Type:</strong> Technical / Business</p>
+      <a href="https://www.amazon.jobs/en/business_categories/student-programs" target="_blank">Apply Now</a>
+    </div>
+
+    <div class="internship-card">
+      <img src="{{ url_for('static', filename='img/infosys.png') }}" alt="Infosys Logo">
+      <h3>Infosys</h3>
+      <p><strong>Role:</strong> IT Intern</p>
+      <p><strong>Duration:</strong> 2 months</p>
+      <p><strong>Stipend:</strong> Paid</p>
+      <p><strong>Type:</strong> Technical</p>
+      <a href="https://www.infosys.com/careers/" target="_blank">Apply Now</a>
+    </div>
+
+    <div class="internship-card">
+      <img src="{{ url_for('static', filename='img/TCS.jpeg') }}" alt="TCS Logo">
+      <h3>TCS</h3>
+      <p><strong>Role:</strong> Software Developer Intern</p>
+      <p><strong>Duration:</strong> 2 months</p>
+      <p><strong>Stipend:</strong> Paid</p>
+      <p><strong>Type:</strong> Technical</p>
+      <a href="https://www.tcs.com/careers" target="_blank">Apply Now</a>
+    </div>
+
+    <div class="internship-card">
+      <img src="{{ url_for('static', filename='img/accenture.png') }}" alt="Accenture Logo">
+      <h3>Accenture</h3>
+      <p><strong>Role:</strong> Consulting Intern</p>
+      <p><strong>Duration:</strong> 2-3 months</p>
+      <p><strong>Stipend:</strong> Paid</p>
+      <p><strong>Type:</strong> Business / Management</p>
+      <a href="https://www.accenture.com/in-en/careers" target="_blank">Apply Now</a>
+    </div>
+
+    <div class="internship-card">
+      <img src="{{ url_for('static', filename='img/cognizant.png') }}" alt="Cognizant Logo">
+      <h3>Cognizant</h3>
+      <p><strong>Role:</strong> Software Developer Intern</p>
+      <p><strong>Duration:</strong> 2 months</p>
+      <p><strong>Stipend:</strong> Paid</p>
+      <p><strong>Type:</strong> Technical</p>
+      <a href="https://careers.cognizant.com/" target="_blank">Apply Now</a>
+    </div>
+
+    <div class="internship-card">
+      <img src="{{ url_for('static', filename='img/wipro.png') }}" alt="Wipro Logo">
+      <h3>Wipro</h3>
+      <p><strong>Role:</strong> IT Intern</p>
+      <p><strong>Duration:</strong> 2 months</p>
+      <p><strong>Stipend:</strong> Paid</p>
+      <p><strong>Type:</strong> Technical</p>
+      <a href="https://careers.wipro.com/" target="_blank">Apply Now</a>
+    </div>
+
+    <div class="internship-card">
+      <img src="https://logo.clearbit.com/uber.com" alt="Uber Logo">
+      <h3>Uber</h3>
+      <p><strong>Role:</strong> Software Engineering Intern</p>
+      <p><strong>Duration:</strong> 3 months</p>
+      <p><strong>Stipend:</strong> Paid</p>
+      <p><strong>Type:</strong> Technical</p>
+      <a href="https://www.uber.com/global/en/careers/" target="_blank">Apply Now</a>
+    </div>
+
+    <div class="internship-card">
+      <img src="https://logo.clearbit.com/flipkart.com" alt="Flipkart Logo">
+      <h3>Flipkart</h3>
+      <p><strong>Role:</strong> Software / Business Intern</p>
+      <p><strong>Duration:</strong> 3 months</p>
+      <p><strong>Stipend:</strong> Paid</p>
+      <p><strong>Type:</strong> Technical / Business</p>
+      <a href="https://www.flipkartcareers.com/" target="_blank">Apply Now</a>
+    </div>
+
+    <div class="internship-card">
+      <img src="https://logo.clearbit.com/byjus.com" alt="BYJU'S Logo">
+      <h3>BYJU'S</h3>
+      <p><strong>Role:</strong> Education Technology Intern</p>
+      <p><strong>Duration:</strong> 2 months</p>
+      <p><strong>Stipend:</strong> Paid</p>
+      <p><strong>Type:</strong> Educational / Technical</p>
+      <a href="https://byjus.com/careers/" target="_blank">Apply Now</a>
+    </div>
+
+    <div class="internship-card">
+      <img src="https://logo.clearbit.com/swiggy.com" alt="Swiggy Logo">
+      <h3>Swiggy</h3>
+      <p><strong>Role:</strong> Operations / Software Intern</p>
+      <p><strong>Duration:</strong> 2-3 months</p>
+      <p><strong>Stipend:</strong> Paid</p>
+      <p><strong>Type:</strong> Business / Technical</p>
+      <a href="https://careers.swiggy.com/" target="_blank">Apply Now</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

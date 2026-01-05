@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Technical Interview Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: radial-gradient(circle at top, #050505 0%, #0a0a0f 100%);
+      color: #e6edf3;
+      min-height: 100vh;
+      padding: 20px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    h1, h2 {
+      color: #58a6ff;
+      text-shadow: 0 0 6px #58a6ff88;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      user-select: none;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 8px;
+    }
+    header p {
+      font-weight: 300;
+      font-size: 1.2rem;
+      color: #8b949e;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    section {
+      background: rgba(25, 30, 40, 0.45);
+      border-radius: 16px;
+      padding: 25px 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 30px rgba(88, 166, 255, 0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(88, 166, 255, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: default;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    section:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 40px rgba(88, 166, 255, 0.5);
+      border-color: #58a6ff;
+      cursor: pointer;
+    }
+    .content {
+      flex: 1 1 500px;
+      min-width: 280px;
+    }
+    section h2 {
+      font-weight: 700;
+      font-size: 1.9rem;
+      margin-bottom: 18px;
+      color: #58a6ff;
+      text-shadow: 0 0 6px #58a6ffaa;
+    }
+    .section-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 16px;
+      box-shadow: 0 0 15px #58a6ff99;
+      object-fit: cover;
+      user-select: none;
+      flex-shrink: 0;
+      transition: box-shadow 0.3s ease;
+    }
+    section:hover .section-img {
+      box-shadow: 0 0 25px #58a6ffcc;
+    }
+    ul {
+      list-style: none;
+      padding-left: 20px;
+    }
+    ul li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 14px;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      transition: color 0.3s ease;
+    }
+    ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      color: #3fb950;
+      font-weight: 700;
+      font-size: 1.2rem;
+      line-height: 1;
+      top: 3px;
+    }
+    ul li:hover {
+      color: #58a6ff;
+    }
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #8b949e;
+      user-select: none;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    nav a {
+      color: #58a6ff;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 15px;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #3fb950;
+    }
+    @media (max-width: 768px) {
+      section {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .section-img {
+        width: 100%;
+        height: 220px;
+        border-radius: 16px;
+        margin-bottom: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Technical Interview Guide</h1>
+    <p>Master your technical interview skills</p>
+  </header>
+
+  <nav>
+    <a href="HR.html">HR Interview</a>
+    <a href="teqchnical.html">Technical Interview</a>
+  </nav>
+
+  <main class="container">
+
+    <section>
+      <img
+        src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80"
+        alt="Technical Interview"
+        class="section-img"
+        loading="lazy"
+      />
+      <div class="content">
+        <h2>What is a Technical Interview?</h2>
+        <ul>
+          <li>Focuses on your job-related skills and problem-solving ability.</li>
+          <li>Includes coding, algorithms, system design, or technical questions.</li>
+          <li>May have live coding, whiteboard challenges, or take-home tests.</li>
+          <li>Evaluates your practical knowledge and technical thinking.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <img
+        src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=400&q=80"
+        alt="Technical Questions"
+        class="section-img"
+        loading="lazy"
+      />
+      <div class="content">
+        <h2>Common Technical Interview Questions</h2>
+        <ul>
+          <li>Write a function to reverse a linked list.</li>
+          <li>Explain object-oriented programming principles.</li>
+          <li>How would you optimize a sorting algorithm?</li>
+          <li>Describe a challenging technical project you completed.</li>
+          <li>Explain the differences between REST and SOAP APIs.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <img
+        src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=400&q=80"
+        alt="Technical Tips"
+        class="section-img"
+        loading="lazy"
+      />
+      <div class="content">
+        <h2>Tips to Succeed in Technical Interviews</h2>
+        <ul>
+          <li>Practice coding problems on platforms like LeetCode or HackerRank.</li>
+          <li>Understand data structures and algorithms thoroughly.</li>
+          <li>Explain your thought process clearly during the interview.</li>
+          <li>Ask clarifying questions before starting to code.</li>
+          <li>Practice mock interviews and review your mistakes.</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Interview Prep. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

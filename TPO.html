@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Training & Placement Officers - Placement Portal</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(circle at top, #050505 0%, #0a0a0f 100%);
+    background-size: 600% 600%;
+    animation: gradientShift 15s ease infinite;
+    color: #e6edf3;
+  }
+
+  @keyframes gradientShift {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+  }
+
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #00aaff;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 400;
+      transition: 0.3s;
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+
+    nav ul li a:hover {
+      background: rgba(0, 170, 255, 0.15);
+      color: #00aaff;
+      box-shadow: 0 0 8px #00aaff;
+    }
+     /* Profile Button */
+    .profile-btn {
+      background-color: #00aaff;
+      color: #fff !important;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .profile-btn:hover {
+      background-color: #0077cc;
+      transform: scale(1.05);
+    }
+
+
+
+  h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #58a6ff;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+  }
+
+  .grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto 50px auto;
+  }
+
+  .card {
+    background: rgba(25, 30, 40, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.8);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(88, 166, 255, 0.2);
+    padding: 30px 25px;
+    color: #e6edf3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(88, 166, 255, 0.3);
+    border-color: #58a6ff;
+  }
+
+  .card img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid rgba(88, 166, 255, 0.25);
+    object-fit: cover;
+    margin-bottom: 25px;
+    box-shadow: 0 0 15px rgba(88,166,255,0.3);
+  }
+
+  .name {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: 0.06em;
+  }
+
+  .role {
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0.85;
+    margin-bottom: 25px;
+  }
+
+  .contact-info {
+    width: 100%;
+  }
+
+  .contact-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    font-size: 1rem;
+    user-select: text;
+  }
+
+  .contact-row svg {
+    width: 22px;
+    height: 22px;
+    margin-right: 14px;
+    fill: #e6edf3;
+    opacity: 0.7;
+    flex-shrink: 0;
+    transition: fill 0.3s;
+  }
+
+  .contact-row:hover svg {
+    fill: #00d4ff;
+  }
+
+  .contact-row a {
+    color: #e6edf3;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .contact-row a:hover {
+    color: #00d4ff;
+  }
+
+  @media (max-width: 480px) {
+    .card img { width: 130px; height: 130px; }
+    h2 { font-size: 2.5rem; }
+  }
+</style>
+</head>
+<body>
+ <header>
+    <h1>Campus360</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="placement.html">Placements</a></li>
+        <li><a href="internship.html">Internship</a></li>
+        <li><a href="branch.html">Branches</a></li>
+        <li><a href="alumini.html">Alumni</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="dashboard.html" class="profile-btn">Profile</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+<h2>Training & Placement Officers</h2>
+
+<div class="grid">
+  <div class="card">
+    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mr. Ramesh Kumar" />
+    <div class="name">Mr. Ramesh Kumar</div>
+    <div class="role">Chief Training & Placement Officer</div>
+    <div class="contact-info">
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <a href="mailto:ramesh.kumar@abcinstitute.edu">ramesh.kumar@abcinstitute.edu</a>
+      </div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.091 15.091 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.75 21 3 13.25 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.21 1.11l-2.43 2.43z"/></svg>
+        <a href="tel:+919876543210">+91-9876543210</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ms. Neha Sharma" />
+    <div class="name">Ms. Neha Sharma</div>
+    <div class="role">Assistant Training & Placement Officer</div>
+    <div class="contact-info">
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <a href="mailto:neha.sharma@abcinstitute.edu">neha.sharma@abcinstitute.edu</a>
+      </div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.091 15.091 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.75 21 3 13.25 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.21 1.11l-2.43 2.43z"/></svg>
+        <a href="tel:+919876543222">+91-9876543222</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Mr. Anil Verma" />
+    <div class="name">Mr. Anil Verma</div>
+    <div class="role">Training Officer</div>
+    <div class="contact-info">
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <a href="mailto:anil.verma@abcinstitute.edu">anil.verma@abcinstitute.edu</a>
+      </div>
+      <div class="contact-row">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.091 15.091 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.53.76 3.88.76a1 1 0 011 1v3.5a1 1 0 01-1 1C10.75 21 3 13.25 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.35.27 2.67.76 3.88a1 1 0 01-.21 1.11l-2.43 2.43z"/></svg>
+        <a href="tel:+919876543233">+91-9876543233</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

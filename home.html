@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus360 | Placement Analytics & Insights</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #050505 0%, #0a0a0f 100%);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #00aaff;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 400;
+      transition: 0.3s;
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+
+    nav ul li a:hover {
+      background: rgba(0, 170, 255, 0.15);
+      color: #00aaff;
+      box-shadow: 0 0 8px #00aaff;
+    }
+     /* Profile Button */
+    .profile-btn {
+      background-color: #00aaff;
+      color: #fff !important;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .profile-btn:hover {
+      background-color: #0077cc;
+      transform: scale(1.05);
+    }
+
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 60px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.3), rgba(10,10,10,0.9));
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+    }
+
+    .hero-content h2 {
+      font-size: 48px;
+      color: #00aaff;
+      
+    }
+
+    .hero-content p {
+      color: #ddd;
+      font-size: 18px;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .hero-content button {
+      margin-top: 30px;
+      background: transparent;
+      border: 2px solid #00aaff;
+      color: #00aaff;
+      padding: 10px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .hero-content button:hover {
+      background: #00aaff;
+      color: #000;
+      box-shadow: 0 0 15px #00aaff;
+    }
+
+    .hero img {
+      flex: 1;
+      max-width: 500px;
+      border-radius: 20px;
+      
+      animation: float 5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    /* Placement Stats */
+    .stats {
+      text-align: center;
+      padding: 80px 20px;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .stats h2 {
+      font-size: 36px;
+      color: #00aaff;
+      margin-bottom: 40px;
+    }
+
+    .stats-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .stat-box {
+      font-size: 24px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+      padding: 40px 60px;
+      transition: 0.3s;
+    }
+
+    .stat-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00aaff;
+    }
+
+    /* Recruiters Section (Previous Style) */
+    .recruiters {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .recruiters h2 {
+      color: #00aaff;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .recruiter-slider {
+      display: flex;
+      animation: scroll 25s linear infinite;
+      gap: 40px;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .recruiter-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 20px 40px;
+      min-width: 180px;
+      transition: 0.4s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 18px;
+      color: #00aaff;
+    }
+
+    .recruiter-card:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px #00aaff;
+      background: rgba(0, 170, 255, 0.1);
+      color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    footer p { color: #aaa; }
+
+    @media(max-width: 768px) {
+      nav ul { flex-direction: column; }
+      .stats-grid { flex-direction: column; align-items: center; }
+      .hero { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Campus360</h1>
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('home') }}">Home</a></li>
+      <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+      <li><a href="{{ url_for('placement') }}">Placements</a></li>
+      <li><a href="{{ url_for('internship') }}">Internships</a></li>
+      <li><a href="{{ url_for('branch') }}">Branches</a></li>
+      <li><a href="{{ url_for('alumini') }}">Alumni</a></li>
+      <li><a href="{{ url_for('TPO') }}">TPO</a></li>
+      <li><a href="{{ url_for('feedback') }}">Feedback</a></li>
+      <li><a href="{{ url_for('dashboard') }}" class="profile-btn">Profile</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Empowering Students with Placement Insights</h2>
+      <p>Campus360 connects students, alumni, and recruiters through smart analytics, real-time placement data, and modern tools that shape bright futures.</p>
+      
+    </div>
+    <img src="{{ url_for('static', filename='img/img1.jpg') }}" alt="Campus Students" />
+
+  </section>
+
+  <section class="stats">
+    <h2>Our Placement Achievements</h2>
+    <div class="stats-grid">
+      <div class="stat-box">📈 1,200+ Students Placed</div>
+      <div class="stat-box">🏢 150+ Companies</div>
+      <div class="stat-box">💼 Avg Package: ₹6.8 LPA</div>
+    </div>
+  </section>
+
+  <section class="recruiters">
+    <h2>Our Top Recruiters</h2>
+    <div class="recruiter-slider">
+      <div class="recruiter-card">Google</div>
+      <div class="recruiter-card">Microsoft</div>
+      <div class="recruiter-card">Amazon</div>
+      <div class="recruiter-card">TCS</div>
+      <div class="recruiter-card">Wipro</div>
+      <div class="recruiter-card">Infosys</div>
+      <div class="recruiter-card">Deloitte</div>
+      <div class="recruiter-card">Accenture</div>
+      <div class="recruiter-card">IBM</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Campus360 | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

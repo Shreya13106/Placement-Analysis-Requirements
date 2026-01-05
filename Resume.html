@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume Preparation Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: radial-gradient(circle at top, #050505 0%, #0a0a0f 100%);
+      color: #e6edf3;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #00aaff;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 400;
+      transition: 0.3s;
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+
+    nav ul li a:hover {
+      background: rgba(0, 170, 255, 0.15);
+      color: #00aaff;
+      box-shadow: 0 0 8px #00aaff;
+    }
+
+    /* Profile Button */
+    .profile-btn {
+      background-color: #00aaff;
+      color: #fff !important;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .profile-btn:hover {
+      background-color: #0077cc;
+      transform: scale(1.05);
+    }
+
+    /* Header (Title Section) */
+    .page-header {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .page-header h2 {
+      font-size: 2.5rem;
+      color: #58a6ff;
+      text-shadow: 0 0 6px #58a6ff88;
+      margin-bottom: 8px;
+    }
+
+    .page-header p {
+      font-weight: 300;
+      font-size: 1.2rem;
+      color: #8b949e;
+    }
+
+    /* Content */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+    }
+
+    section {
+      background: rgba(25, 30, 40, 0.45);
+      border-radius: 16px;
+      padding: 25px 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 30px rgba(88, 166, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(88, 166, 255, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    section:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 40px rgba(88, 166, 255, 0.5);
+      border-color: #58a6ff;
+    }
+
+    .content {
+      flex: 1 1 500px;
+      min-width: 280px;
+    }
+
+    section h2 {
+      font-weight: 700;
+      font-size: 1.9rem;
+      margin-bottom: 18px;
+      color: #58a6ff;
+      text-shadow: 0 0 6px #58a6ffaa;
+    }
+
+    .section-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 16px;
+      box-shadow: 0 0 15px #58a6ff99;
+      object-fit: cover;
+      flex-shrink: 0;
+      transition: box-shadow 0.3s ease;
+    }
+
+    section:hover .section-img {
+      box-shadow: 0 0 25px #58a6ffcc;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 14px;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      transition: color 0.3s ease;
+    }
+
+    ul li:hover {
+      color: #58a6ff;
+    }
+
+    .image-gallery {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .image-gallery img {
+      width: 200px;
+      height: 260px;
+      border-radius: 14px;
+      box-shadow: 0 0 15px #58a6ffaa;
+      object-fit: cover;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #58a6ffcc;
+    }
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #8b949e;
+      padding-bottom: 20px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      section {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .section-img {
+        width: 100%;
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <h1>Campus360</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="placement.html">Placements</a></li>
+        <li><a href="internship.html">Internship</a></li>
+        <li><a href="branch.html">Branches</a></li>
+        <li><a href="alumni.html">Alumni</a></li>
+        <li><a href="TPO.html">TPO</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="profile.html" class="profile-btn">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Title -->
+  <div class="page-header">
+    <h2>Resume Preparation Guide</h2>
+    <p>Everything you need to create a professional and eye-catching resume</p>
+  </div>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section>
+      <img src="{{ url_for('static', filename='img/resume.jpg') }}" alt="What is a Resume?" class="section-img" />
+      <div class="content">
+        <h2>What is a Resume?</h2>
+        <ul>
+          <li>A resume summarizes your education, skills, and work experience.</li>
+          <li>It serves as your personal marketing tool to impress employers.</li>
+          <li>Common formats include chronological, functional, and combination styles.</li>
+          <li>Always tailor your resume for each job or internship.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80" alt="Resume Tips" class="section-img" />
+      <div class="content">
+        <h2>Tips for Building a Resume</h2>
+        <ul>
+          <li>Start with a clear and professional header.</li>
+          <li>Write a strong objective or summary.</li>
+          <li>List education, internships, and key achievements.</li>
+          <li>Use bullet points and action verbs.</li>
+          <li>Keep it concise and proofread carefully.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="content" style="flex: 1 1 100%;">
+        <h2>Sample Resume Layouts</h2>
+        <p style="margin-bottom: 15px; color: #a1b1d1;">
+          Below are examples of well-designed resumes to inspire your own layout.
+        </p>
+        <div class="image-gallery">
+          <img src="{{ url_for('static', filename='img/resume1.jpg') }}" alt="Resume Sample 1" />
+          <img src="{{ url_for('static', filename='img/resume2.jpg') }}" alt="Resume Sample 2" />
+          <img src="{{ url_for('static', filename='img/resume3.webp') }}" alt="Resume Sample 3" />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <img src="{{ url_for('static', filename='img/mistake.png') }}" alt="Common Mistakes" class="section-img" />
+      <div class="content">
+        <h2>Common Mistakes to Avoid</h2>
+        <ul>
+          <li>Including irrelevant information.</li>
+          <li>Using unprofessional email addresses.</li>
+          <li>Spelling or grammatical errors.</li>
+          <li>Overcrowded or sparse layout.</li>
+          <li>Failing to tailor your resume for each position.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Resume Prep. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

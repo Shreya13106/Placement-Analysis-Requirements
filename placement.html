@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Placement History | Campus360</title>
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #050505 0%, #0a0a0f 100%);
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #00aaff;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 400;
+      transition: 0.3s;
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+
+    nav ul li a:hover {
+      background: rgba(0, 170, 255, 0.15);
+      color: #00aaff;
+      box-shadow: 0 0 8px #00aaff;
+    }
+
+    /* Profile Button */
+    .profile-btn {
+      background-color: #00aaff;
+      color: #fff !important;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .profile-btn:hover {
+      background-color: #0077cc;
+      transform: scale(1.05);
+    }
+
+    /* Heading */
+    .heading {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    .heading h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: #00aaff;
+    }
+
+    .heading p {
+      color: #aaa;
+    }
+
+    /* Table Container */
+    .placement-table-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto 3rem auto;
+      background: rgba(255,255,255,0.05);
+      padding: 1.5rem;
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255,255,255,0.1);
+      overflow-x: auto;
+      box-shadow: 0 0 15px rgba(0,170,255,0.2);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      min-width: 600px;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      color: #ccc;
+    }
+
+    th {
+      color: #00aaff;
+      font-weight: 600;
+      background: rgba(255,255,255,0.05);
+    }
+
+    tr:hover {
+      background: rgba(0,212,255,0.05);
+    }
+
+    @media(max-width:768px){
+      header { padding: 15px 25px; }
+      nav ul li { margin: 0 8px; }
+      th, td { padding: 10px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <h1>Campus360</h1>
+    <nav>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="placement.html">Placements</a></li>
+        <li><a href="internship.html">Internship</a></li>
+        <li><a href="branch.html">Branches</a></li>
+        <li><a href="alumini.html">Alumni</a></li>
+        <li><a href="TPO.html">TPO</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="dashboard.html" class="profile-btn">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Heading -->
+  <div class="heading">
+    <h1>Placement History</h1>
+    <p>Records of students placed in various companies over the years</p>
+  </div>
+
+  <!-- Table -->
+  <div class="placement-table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Branch</th>
+          <th>Company</th>
+          <th>Role</th>
+          <th>Year</th>
+          <th>CTC / Stipend</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Rohit Sharma</td><td>Computer Science</td><td>Google</td><td>Software Engineer</td><td>2025</td><td>₹25 LPA</td></tr>
+        <tr><td>Ananya Singh</td><td>Electronics</td><td>Microsoft</td><td>Software Developer</td><td>2025</td><td>₹22 LPA</td></tr>
+        <tr><td>Aditya Kumar</td><td>Mechanical</td><td>TCS</td><td>Software Intern</td><td>2025</td><td>₹5 LPA</td></tr>
+        <tr><td>Priya Verma</td><td>Computer Science</td><td>Amazon</td><td>Business Analyst Intern</td><td>2025</td><td>₹12 LPA</td></tr>
+        <tr><td>Vikram Patil</td><td>Electronics</td><td>Infosys</td><td>IT Intern</td><td>2024</td><td>₹4 LPA</td></tr>
+        <tr><td>Neha Gupta</td><td>Computer Science</td><td>Accenture</td><td>Consulting Intern</td><td>2024</td><td>₹6 LPA</td></tr>
+        <tr><td>Shubham Jain</td><td>Mechanical</td><td>Wipro</td><td>IT Intern</td><td>2024</td><td>₹5 LPA</td></tr>
+        <tr><td>Divya Reddy</td><td>Civil</td><td>Uber</td><td>Software Engineer</td><td>2025</td><td>₹20 LPA</td></tr>
+        <tr><td>Rakesh Kumar</td><td>Computer Science</td><td>Flipkart</td><td>Software Intern</td><td>2025</td><td>₹15 LPA</td></tr>
+        <tr><td>Simran Kaur</td><td>Electronics</td><td>BYJU'S</td><td>EdTech Intern</td><td>2025</td><td>₹8 LPA</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

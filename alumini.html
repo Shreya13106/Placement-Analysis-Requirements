@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus360 | Alumni</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #0b0f19;
+      color: #ffffff;
+    }
+
+    /* Navbar */
+     /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 28px;
+      color: #00aaff;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 400;
+      transition: 0.3s;
+      padding: 8px 14px;
+      border-radius: 8px;
+    }
+
+    nav ul li a:hover {
+      background: rgba(0, 170, 255, 0.15);
+      color: #00aaff;
+      box-shadow: 0 0 8px #00aaff;
+    }
+     /* Profile Button */
+    .profile-btn {
+      background-color: #00aaff;
+      color: #fff !important;
+      padding: 8px 15px;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .profile-btn:hover {
+      background-color: #0077cc;
+      transform: scale(1.05);
+    }
+    /* Heading */
+    .heading {
+      text-align: center;
+      margin: 50px 20px 20px;
+    }
+
+    .heading h1 {
+      color: #00aaff;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .heading p {
+      color: #ccc;
+      font-size: 1rem;
+    }
+
+    /* Alumni Cards */
+    .alumni-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px 60px;
+    }
+
+    .card {
+      background-color: #111827;
+      border: 1px solid #1e3a8a;
+      border-radius: 12px;
+      text-align: center;
+      padding: 25px;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0, 170, 255, 0.2);
+    }
+
+    .card img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 2px solid #00aaff;
+    }
+
+    .card h3 {
+      color: #00aaff;
+      font-size: 1.3rem;
+      margin-bottom: 5px;
+    }
+
+    .card .batch {
+      color: #61dafb;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+
+    .card .info {
+      color: #ccc;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+
+    .card .highlight {
+      color: #00aaff;
+      font-weight: 500;
+    }
+
+    .card .email {
+      font-size: 0.9rem;
+      color: #9cd9ff;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+    <header>
+    <h1>Campus360</h1>
+    <nav>
+      <ul>
+        <li><a href="home2.html">Home</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="placement.html">Placements</a></li>
+        <li><a href="internship.html">Internships</a></li>
+        <li><a href="branch.html">Branches</a></li>
+        <li><a href="alumini.html">Alumni</a></li>
+        <li><a href="TPO.html">TPO</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="dashboard.html" class="profile-btn">Profile</a></li>
+      </ul>
+    </nav>
+    
+  </header>
+
+  <!-- Heading -->
+  <div class="heading">
+    <h1>Our Alumni</h1>
+    <p>Meet our proud graduates who are achieving excellence across the globe</p>
+  </div>
+
+  <!-- Alumni Cards -->
+  <div class="alumni-container">
+
+    <div class="card">
+      <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Alumni">
+      <h3>Rohan Ghadvir</h3>
+      <p class="batch">Batch of 2025</p>
+      <p class="info"><span class="highlight">Position:</span>software Engineer at Hexaware</p>
+      <p class="info"><span class="highlight">Location:</span> Pune, India</p>
+      <p class="info"><span class="highlight">Achievements:</span> Developed scalable AI systems used in Google Search.</p>
+      <p class="email">📧 rohan.ghadvir@gmail.com</p>
+    </div>
+    <div class="card">
+      <img src="https://randomuser.me/api/portraits/men/66.jpg" alt="Alumni">
+      <h3>Sohal Dhavale</h3>
+      <p class="batch">Batch of 2024</p>
+      <p class="info"><span class="highlight">Position:</span> Data Analyst at Hexaware</p>
+      <p class="info"><span class="highlight">Location:</span> Pune, India</p>
+      <p class="info"><span class="highlight">Achievements:</span> Built predictive models that improved delivery efficiency by 15%.</p>
+      <p class="email">📧 shradha.patil@amazon.in</p>
+    </div>
+
+    <div class="card">
+      <img src="https://randomuser.me/api/portraits/women/47.jpg" alt="Alumni">
+      <h3>Shraddha Patil</h3>
+      <p class="batch">Batch of 2025</p>
+      <p class="info"><span class="highlight">Position:</span> UX Designer at Microsoft</p>
+      <p class="info"><span class="highlight">Location:</span> Hyderabad, India</p>
+      <p class="info"><span class="highlight">Achievements:</span> Led UI design for major Microsoft Teams features.</p>
+      <p class="email">📧 sohal.dhavale@outlook.com</p>
+    </div>
+
+    
+
+    <div class="card">
+      <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Alumni">
+      <h3>Apurva Patil</h3>
+      <p class="batch">Batch of 2024</p>
+      <p class="info"><span class="highlight">Position:</span> Project Manager at Infosys</p>
+      <p class="info"><span class="highlight">Location:</span> Kochi, India</p>
+      <p class="info"><span class="highlight">Achievements:</span> Managed 5+ international client projects successfully.</p>
+      <p class="email">📧 apurva.patil@infosys.com</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
